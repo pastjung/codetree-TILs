@@ -18,7 +18,9 @@ int main() {
         char code;
         cin >> code;
         if(code == 'L'){
-            it--;
+            if (it != l.begin()) {
+                it--;
+            }
         }
         else if(code == 'P'){
             char c;
@@ -26,10 +28,14 @@ int main() {
             l.insert(it, c);
         }
         else if(code == 'R'){
-            it++;
+            if (it != l.end()) {
+                it++;
+            }
         }
         else if(code == 'D'){
-            l.erase(it);
+            if (it != l.end()) {
+                it = l.erase(it);
+            }
         }
     }
 
