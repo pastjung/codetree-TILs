@@ -7,7 +7,7 @@ vector<int> arr;
 int k = 5;
 
 void radix_sort(int n){
-    for(int i = 0; i < k; i++){
+    for(int i = 0; i < k + 1; i++){
         vector<vector<int>> v(10);
         
         for(int j = 0; j < n; j++){
