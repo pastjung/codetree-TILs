@@ -11,7 +11,7 @@ void radix_sort(int n){
         vector<vector<int>> v(10);
         
         for(int j = 0; j < n; j++){
-            int digit = (int)(arr[j] / static_cast<int>(pow(10, i))) % 10;
+            int digit = (int)(arr[j] / pow(10, i)) % 10;
             v[digit].push_back(arr[j]);
         }
 
