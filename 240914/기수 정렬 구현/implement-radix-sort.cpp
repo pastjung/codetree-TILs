@@ -1,4 +1,5 @@
 #include <iostream>
+#include <cmath>
 #include <vector>
 using namespace std;
 
@@ -10,7 +11,7 @@ void radix_sort(int n){
         vector<vector<int>> v(10);
         
         for(int j = 0; j < n; j++){
-            int digit = arr[j] % 10;
+            int digit = (arr[j] / (int)pow(10, i)) % 10;
             v[digit].push_back(arr[j]);
         }
 
