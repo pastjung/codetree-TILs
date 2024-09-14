@@ -12,13 +12,9 @@ void selection_sort(int n){
                 min = j;
             }
         }
-
-        // 최소값 스왑
-        if(min != i){
-            int temp = arr[i];
-            arr[i] = arr[min];
-            arr[min] = temp;
-        }
+        int temp = arr[i];
+        arr[i] = arr[min];
+        arr[min] = temp;
     }
 }
 
