@@ -20,7 +20,10 @@ void merge(int start, int mid, int end){
     // 오른쪽 배열 부분이 남은 경우
     while(right <= right) merged_arr[t++] = arr[right];
 
-    arr = merged_arr;
+    // 배열 완성
+    for(int i = 1; i <= end; i++){
+        arr[i] = merged_arr[i];
+    }
 }
 
 void merge_sort(int start, int end){
