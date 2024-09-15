@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 
-#define SIZE 100001
+#define SIZE 100000
 int arr[SIZE] = {0, };
 int merged_arr[SIZE] = {0, };
 
@@ -21,7 +21,7 @@ void merge(int start, int mid, int end){
     while(right <= right) merged_arr[t++] = arr[right];
 
     // 배열 완성
-    for(int i = 1; i <= end; i++){
+    for(int i = 0; i < end; i++){
         arr[i] = merged_arr[i];
     }
 }
@@ -38,13 +38,13 @@ void merge_sort(int start, int end){
 int main() {
     int n;
     cin >> n;
-    for(int i = 1; i <= n; i++){
+    for(int i = 0; i < n; i++){
         cin >> arr[i];
     }
     
-    merge_sort(1, n);
+    merge_sort(0, n - 1);
 
-    for(int i = 1; i <= n; i++){
+    for(int i = 0; i < n; i++){
         cout << arr[i] << ' ';
     }
     cout << "\n";
